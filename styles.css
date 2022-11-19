@@ -1,0 +1,163 @@
+/* colors */
+:root {
+    --gray: #4b5161;
+    --white: #f0f8ff;
+    --purple: #b7b3e1;
+    --blue: #c4e0fd;
+    --pink: #ffc9e0;
+}
+
+/* animation */
+@-webkit-keyframes GradientAnim {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes GradientAnim {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes GradientAnim {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@font-face {
+    font-family: Karla;
+    src: url('./assets/Karla-Medium.ttf');
+}
+
+/* common */
+html,
+body {
+    min-height: 100%;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2em;
+    color: var(--gray);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: unset;
+    background: linear-gradient(270deg,
+            var(--purple),
+            var(--blue),
+            var(--pink));
+    background-size: 600% 600%;
+    -webkit-animation: GradientAnim 30s ease infinite;
+    -moz-animation: GradientAnim 30s ease infinite;
+    animation: GradientAnim 30s ease infinite;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+a {
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 0 1px;
+    text-decoration: none;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* flex-table */
+.fx-col {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vw;
+}
+
+.fx-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+}
+
+.fx-row>p {
+    min-width: 300px;
+}
+
+/* style classes */
+.container {
+    min-height: 100vh;
+    background-color: transparent;
+    margin: 0;
+    border: 2vh aliceblue solid;
+    transition: .3s;
+}
+
+.container>.content {
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+}
+
+.container:has(.content:hover) {
+    min-height: 96vh;
+    margin: 2vh;
+    background-color: var(--white);
+    transition: .3s;
+}
+
+.photo-container {
+    text-align: center;
+}
+
+.photo-container>.photo {
+    width: 24vw;
+    height: 25vw;
+    border-radius: 50%;
+}
+
+.main-text {
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.no-marker>li {
+    list-style: none;
+}
