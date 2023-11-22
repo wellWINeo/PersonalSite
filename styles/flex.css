@@ -1,0 +1,17 @@
+/* flex-table */
+.fx-col {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vw;
+}
+
+.fx-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+}
+
+.fx-row>p {
+    min-width: 300px;
+}

@@ -1,0 +1,35 @@
+/* style classes */
+.container {
+    min-height: 100vh;
+    background-color: transparent;
+    margin: 0;
+    border: 2vh aliceblue solid;
+    transition: .3s;
+}
+
+.container>.content {
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+}
+
+.container:has(.content:hover) {
+    min-height: 96vh;
+    margin: 2vh;
+    background-color: var(--white);
+    transition: .3s;
+}
+
+.size25vw {
+    width: 25vw;
+    height: 25vw;
+}
+
+.main-text {
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.no-marker>li {
+    list-style: none;
+}
